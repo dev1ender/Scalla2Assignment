@@ -1,0 +1,25 @@
+
+object GCD {
+  
+  //function to calculate the gcd of the two nos
+  def gcd(a:Int, b:Int): Int = {
+    if(b==0) a else gcd(b,a%b)
+  }
+  
+ //main method of the object
+  def main(args:Array[String]) : Unit = {
+    println("\ncalculate the gcd of the two no")
+    
+    //taking frist user input
+    println("\nEnter the first no:")
+    var input1 = scala.io.StdIn.readLine().toInt
+    
+    //taking second user input
+    println("\nEnter the second no:")
+    var input2 = scala.io.StdIn.readLine().toInt
+    
+    //printing the result by passing the inputs to the gcd function 
+    println(s"GCD of $input1 and $input2 is: "+ gcd(input1,input2))
+    
+  }
+}
